@@ -1,4 +1,4 @@
-# Flutter Module & Feature Scaffolding Script (`create_flutter_module_and_feature.sh`)
+# Flutter Module & Feature Scaffolding Script (`flutter_module_creator.sh`)
 
 This script automates the creation of a new Flutter module (as a separate package) and scaffolds an initial feature structure within it. The generated structure follows our team's preferred clean architecture conventions.
 
@@ -31,7 +31,7 @@ Before using this script, ensure you have:
 To make the script easily accessible from any location in your terminal, follow these one-time setup steps on your Mac.
 
 ### 3.1. Get the Script
-* Obtain the `create_flutter_module_and_feature.sh` file. (This `README.md` should ideally be in the same repository or location as the script).
+* Obtain the `flutter_create_module.sh` file. (This `README.md` should ideally be in the same repository or location as the script).
 
 ### 3.2. Create a Personal Scripts Folder
 This is a standard place to keep your command-line scripts.
@@ -43,16 +43,16 @@ This is a standard place to keep your command-line scripts.
     *(The `-p` flag ensures it doesn't show an error if the folder already exists).*
 
 ### 3.3. Move the Script into `~/bin`
-1.  Assuming the script `create_flutter_module_and_feature.sh` is in the current directory (e.g., you've cloned this repository), type in Terminal:
+1.  Assuming the script `flutter_create_module.sh` is in the current directory (e.g., you've cloned this repository), type in Terminal:
     ```bash
-    mv create_flutter_module_and_feature.sh ~/bin/
+    mv flutter_create_module.sh ~/bin/
     ```
     *(If it's elsewhere, adjust the source path accordingly).*
 
 ### 3.4. Make the Script Executable
 1.  In Terminal, type:
     ```bash
-    chmod +x ~/bin/create_flutter_module_and_feature.sh
+    chmod +x ~/bin/flutter_create_module/flutter_create_module.sh
     ```
 
 ### 3.5. Add Your `~/bin` Folder to Your Shell's `PATH`
@@ -64,7 +64,7 @@ This allows your terminal to find the script.
 2.  Use the arrow keys to scroll to the very **end** of the file.
 3.  Add the following exact line as a new line at the end:
     ```
-    export PATH="$HOME/bin:$PATH"
+    export PATH="$HOME/bin/flutter_create_module:$PATH"
     ```
 4.  **Save and Exit `nano`**:
     * Press `Ctrl + O` (the letter "O").
@@ -93,7 +93,7 @@ Once the one-time setup is complete:
 3.  **Run the Script:**
     Simply type the script's name:
     ```bash
-    create_flutter_module_and_feature.sh
+    flutter_module_creator.sh
     ```
 4.  **Follow the Prompts:**
     * **Prompt 1 (Module Name):**
@@ -107,11 +107,11 @@ Once the one-time setup is complete:
 
 ## 5. Quick Troubleshooting
 
-* **`zsh: command not found: create_flutter_module_and_feature.sh`**
+* **`zsh: command not found: flutter_create_module.sh`**
     * **Likely Cause:** Terminal session hasn't picked up `PATH` changes.
     * **Fix:** Close ALL terminal windows and open a new one. Or, run `source ~/.zshrc` in your current terminal.
     * Verify you completed all steps in "3. One-Time Setup".
-    * Check if `create_flutter_module_and_feature.sh` is in `~/bin` (`ls -l ~/bin`).
+    * Check if `flutter_create_module.sh` is in `~/bin` (`ls -l ~/bin`).
     * Ensure no typos in the script name when running.
 
 * **`flutter: command not found` (error from the script)**
@@ -121,7 +121,7 @@ Once the one-time setup is complete:
     * A folder with the module name you entered already exists. Delete/move it or choose a different name.
 
 * **Permission errors when running the script:**
-    * You might have missed Step 3.4 (`chmod +x ...`). Re-run it on `~/bin/create_flutter_module_and_feature.sh`.
+    * You might have missed Step 3.4 (`chmod +x ...`). Re-run it on `~/bin/flutter_create_module/flutter_create_module.sh`.
 
 ## 6. What Gets Created (Brief Overview)
 
